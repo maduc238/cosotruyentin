@@ -8,7 +8,6 @@ leng = len(output)
 
 g1 = np.array([[1,0,1]])
 g2 = np.array([[1,1,1]])
-g3 = np.array([[1,1,1]])
 
 def HammingDis(a,b):
     dis = 0
