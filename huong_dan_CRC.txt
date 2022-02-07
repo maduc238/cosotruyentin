@@ -1,0 +1,56 @@
+Một số mẫu để thử
+
+Ví dụ 1:
+mã hóa encoder.py
+INPUT
+Nhập chiều dài mã mang tin n: 7
+Nhập chiều dài từ mã chứa thông tin k: 4
+Nhập đa thức chứa thông tin Qx: 1100
+OUTPUT
+Đa thức sinh được sử dụng Gx: 1101
+Px (mã tin không hệ thống): 1011100
+Px (mã tin hệ thống):       1100101
+
+giải mã decoder.py
+INPUT
+Nhập từ mã mang tin Px: 1011100
+Nhập đa thức sinh Gx: 1101
+Nhập số lỗi sai s: 1
+OUTPUT
+Mã hóa được
+Dịch trái: 0 bit
+Qx (mã tin không hệ thống): 1100
+Qx (mã tin hệ thống):       1011
+
+********************************
+
+Ví dụ 2:
+mã hóa encoder.py
+INPUT
+Nhập chiều dài mã mang tin n: 20
+Nhập chiều dài từ mã chứa thông tin k: 11
+Nhập đa thức chứa thông tin Qx: 10111010110
+OUTPUT
+Đa thức sinh được sử dụng Gx: 0000011111
+Px (mã tin không hệ thống): 00000110101011110010
+Px (mã tin hệ thống):       10111010110010011110
+
+giải mã decoder.py
+INPUT
+Nhập từ mã mang tin Px: 00000110101011110010
+Nhập đa thức sinh Gx: 0000011111
+Nhập số lỗi sai s: 1
+OUTPUT
+Mã hóa được
+Dịch trái: 0 bit
+Qx (mã tin không hệ thống): 10111010110
+Qx (mã tin hệ thống):       11010101111
+
+********************************
+
+Với phần gửi tin + mã hóa (sender.py) và nhận tin + giải mã (receiver.py)
+ban đầu chạy code receiver.py để mở cổng kết nối và chờ đợi tin
+
+sau đó mở terminal khác rồi chạy code sender.py. Hoăc có thể dùng thiết bị khác để gửi với điều kiện là biết địa chỉ IP của bên nhận
+khi code yêu cầu nhập, nhập mẩu tin để gửi như 10111010001011101
+Sau đó cả hai sẽ có phản hồi lại với nhau
