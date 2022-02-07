@@ -6,6 +6,6 @@ Nội dung:
 
 Yêu cầu:
 Phải cài python, thư viện numpy
-Trong file phải có thư viện library.py
+Phải có thư viện library.py
 
 Good luck :D
