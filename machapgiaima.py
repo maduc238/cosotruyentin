@@ -4,7 +4,7 @@ from os import system
 system("cls")
 
 output = ['11','10','00','10','11','01','00','01']
-leng = 8
+leng = len(output)
 
 g1 = np.array([[1,0,1]])
 g2 = np.array([[1,1,1]])
