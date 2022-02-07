@@ -18,7 +18,7 @@ def HammingDis(a,b):
 
 Dismin = 100
 for i in range(1,2**leng):
-    A = np.array([[0,0,0]])
+    A = np.zeros((1,len(g1[0])),dtype=int)
     output_temp = []
     temp = bin(i)[2:].zfill(leng)
     HamDis = 0
@@ -31,7 +31,7 @@ for i in range(1,2**leng):
     if HamDis < Dismin: Dismin = HamDis
 
 for i in range(1,2**leng):
-    A = np.array([[0,0,0]])
+    A = np.zeros((1,len(g1[0])),dtype=int)
     output_temp = []
     temp = bin(i)[2:].zfill(leng)
     HamDis = 0
