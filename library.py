@@ -14,34 +14,20 @@ def sodu(sobichia, sochia):
     """
     Hàm lấy số dư của một phép chia
     """
-    #biến i là con trỏ chạy quan trọng trong hàm của phép chia này
-    #gán giá trị ban đầu của i là chiều dài bit của số chia
     i = len(sochia)
-
-    #từ chiều dài của số chia có được, lấy 'i' bit của số bị chia để thực hiện phép xor
-    #gọi phần từ nhỏ lấy được của số bị chia là chia_process
     chia_process = sobichia[0 : i]
-
-    #dùng vòng lặp bắt đầu chia
     while i < len(sobichia):
-        #nếu số bit đầu tiên của chia_process là 1, thực hiện phép xor bình thường của sochia và chia_process
         if chia_process[0] == '1':
-            #thu được mảng mới, đồng thời dịch mảng sang trái, nối thêm bit thứ i của số bị chia (như phép dịch dần của phép chia), không làm thay đổi kích thước của mảng chia_process
             chia_process = xor(sochia, chia_process, 1) + sobichia[i]
-        #ngược lại, nếu số bit đầu tiên là 0 thì thực hiện tương tự, tuy nhiên chỉ cần thay chia process bằng các bit 000... để giữ nguyên giá trị
         else:
-            #sobichia lúc này là 000... (i phần tử số 0)
             chia_process = xor('0'*i, chia_process, 1) + sobichia[i]
-        #tăng thêm vị trí của con trỏ i trong số bị chia
         i += 1
  
-    #đến lúc này tràn hết giá trị i, làm các tương tự với chia_process cuối cùng của phép chia
     if chia_process[0] == '1':
         chia_process = xor(sochia, chia_process, 1)
     else:
         chia_process = xor('0'*i, chia_process, 1)
 
-    #cuối cùng thu được mảng chứa các bit dư của phép chia này
     so_du = chia_process
     return so_du
 
