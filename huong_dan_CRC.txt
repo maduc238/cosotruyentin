@@ -45,12 +45,3 @@ Mã hóa được
 Dịch trái: 0 bit
 Qx (mã tin không hệ thống): 10111010110
 Qx (mã tin hệ thống):       11010101111
-
-********************************
-
-Với phần gửi tin + mã hóa (sender.py) và nhận tin + giải mã (receiver.py)
-ban đầu chạy code receiver.py để mở cổng kết nối và chờ đợi tin
-
-sau đó mở terminal khác rồi chạy code sender.py. Hoăc có thể dùng thiết bị khác để gửi với điều kiện là biết địa chỉ IP của bên nhận
-khi code yêu cầu nhập, nhập mẩu tin để gửi như 10111010001011101
-Sau đó cả hai sẽ có phản hồi lại với nhau
