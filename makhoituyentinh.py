@@ -2,12 +2,12 @@ import numpy as np
 from library import *
 
 #ma trận sinh
-G = np.array([[1,0,0,0,1,1,0],
-            [0,1,0,0,1,0,1],
-            [0,0,1,0,0,1,1],
-            [0,0,0,1,1,1,1]])
+G = np.array([[1,1,0,1,0,0,0],
+            [1,0,1,1,1,0,0],
+            [0,1,0,0,0,1,1],
+            [1,0,1,0,0,0,1]])
 #tin tổ hợp
-u = np.array([[1,1,1,0]])
+u = np.array([[1,0,0,1]])
 shape = len(G)
 A = G[:,:shape]
 I = np.eye(shape,dtype=int)
